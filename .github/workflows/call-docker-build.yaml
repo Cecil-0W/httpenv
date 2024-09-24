@@ -59,10 +59,7 @@
             cache-from: type=gha
             cache-to: type=gha,mode=max
 # 02 End
-            platforms: |
-              linux/amd64
-              linux/arm64
-              linux/arm/v7
+            platforms: linux/amd64,linux/arm64,linux/arm/v7
 # 03 End
         - name: CVE Scan (Unenforced)
           uses: aquasecurity/trivy-action@master
@@ -117,8 +114,5 @@
             labels: ${{ steps.docker_meta.outputs.labels }}
             cache-from: type=gha
             cache-to: type=gha,mode=max
-            platforms: |
-              linux/amd64
-              linux/arm64
-              linux/arm/v7
+            platforms: linux/amd64,linux/arm64,linux/arm/v7
 
